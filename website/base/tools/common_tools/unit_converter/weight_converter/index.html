@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../../../../common/css/common.css" />
+    <link rel="stylesheet" href="index.css" />
+
+    <title>重量单位换算</title>
+</head>
+
+<body>
+    <div class="wrapper container-fluid">
+
+        <div class="shadow-sm p-3 bg-white rounded">
+            <h5>重量单位换算</h5>
+        </div>
+        <div style="margin:15px">
+            <div class="form-row">
+                <div class="form-group col-sm-2">
+                    【公 制】
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputCity">吨</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="mTon" size="15" \="">
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputState">公斤(kg)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="mKilogram" size="15"
+                        \="">
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputZip">克(g)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="mGram" size="15" \="">
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputZip">毫克(mg)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="mMilligram" size="15"
+                        \="">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-sm-2">
+                    【市 制】
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputCity">市斤</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="cJin" size="15" \="">
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputState">担</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="cDan" size="15" \="">
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputZip">两</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="cLiang" size="15" \="">
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputZip">钱</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="cQian" size="15" \="">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-sm-2">
+                    【金衡制】
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputZip">金衡磅(lb t)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="troyPound" size="15"
+                        \="">
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputState">金衡盎司(oz t)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="troyOunce" size="15"
+                        \="">
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputZip">英钱(dwt)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="troyDWT" size="15" \="">
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputState">金衡格令</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="troyGrain" size="15"
+                        \="">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-sm-2">
+                    【常衡制】
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputCity">(英制)长吨</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="briTon" size="15" \="">
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputState">(美制)短吨</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="usTon" size="15" \="">
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputZip">英担(cwt)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="briCWT" size="15" \="">
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputZip">美担(cwt)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="usCWT" size="15" \="">
+                </div>
+
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-sm-2">
+
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputCity">英石</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="briStone" size="15" \="">
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputState">磅(lb)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="avdpPound" size="15"
+                        \="">
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputZip">盎司(oz)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="avdpOunce" size="15"
+                        \="">
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputZip">打兰(dr)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="avdpDram" size="15" \="">
+                </div>
+
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-sm-2">
+
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputCity">格令</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="avdpGrain" size="15"
+                        \="">
+                </div>
+
+                <div class="form-group col-sm-2">
+                    <label for="inputState">&nbsp;</label>
+                    <button type="button"
+                        class="input-button form-control form-control-sm btn btn-primary">数据重置</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="alert alert-info" style="margin:15px">
+            <h5>关于重量换算：</h5>
+            <div class="tools_jieshao l">
+                <p>重量是物体受万有引力作用后力的度量，重量和质量不同。单位是千克重。在地球引力下,
+                    重量和质量是等值的，但是度量单位不同。质量为1千克的物质受到外力1牛顿时所产生的重量称为1千克重。重量作为一个物理概念，它的确切意义究竟是什么？各教科书说法不一，对此有不同的理解和解释，因此在它的用法上就造成了"一词多意"的混乱现象。在地球引力下，质量为1公斤的物质产生的重量为9.8牛顿。
+                </p>
+                <p>常用的质量单位有：微克（ug）、毫克（mg）、克（g）、千克（kg）、吨（t）等。</p>
+                <p>可实现在线立方米(Cubic meter)、公石(hectoliter)、十升(dekaliter)、立方分米(Cubic
+                    dm)、升(liter)、分升(deciliter)、厘升(centiliter)、立方厘米(Cubic cm)、毫升(milliliter)、立方毫米(Cubic
+                    millimeter)、桶(Barrel)、蒲式耳(Bushel)、配克(Peck)、夸脱(Quart)、品脱(Pint)、加仑(Gallon)、盎司(Ounce)、打兰(dram)、量滴(Minim)、立方码(Cubic
+                    yard)、立方英尺(Cubic foot)、立方英寸(Cubic inch)间的互转互换。</p>
+            </div>
+            <div style="margin:10px">
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"> </script>-->
+
+    <script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+<script src="../../../../common/js/common.js?20190718"></script>
+    <script src="index.js?20190711"></script>
+</body>
+
+</html>

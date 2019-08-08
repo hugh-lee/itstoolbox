@@ -1,0 +1,16 @@
+{
+    "references" : [
+        {
+            "title" : "阿里云",
+            "description" : "",
+            "image" : "https://img.alicdn.com/tfs/TB1Ly5oS3HqK1RjSZFPXXcwapXa-238-54.png",
+            "url" : "https://whois.aliyun.com/whois/domain/"
+        },
+        {
+            "title" : "站长之家",
+            "description" : "",
+            "image" : "https://csstools.chinaz.com/tools/images/public/logos/logo-whois.png",
+            "url" : "https://whois.chinaz.com/"
+        }
+    ]
+}

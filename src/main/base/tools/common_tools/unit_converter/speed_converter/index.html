@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>速度单位换算</title>
+    <meta name="keywords" content="速度换算,速度单位换算,速度单位转换器,速度国际单位转换" />
+    <meta name="description" content="常用速度单位换算，千米/秒(KM/s)，千米/小时(KM/h)，米/秒(M/s)" />
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="../../../../common/css/common.css" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <div class="wrapper container-fluid">
+        <div class="shadow-sm p-3 bg-white rounded">
+            <h5>速度单位换算</h5>
+        </div>
+        <div style="margin:15px">
+            <div class="form-row">
+                <div class="form-group col-sm-2">
+                    <label for="inputCity">米/秒 (m/s)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="mMeter_s" size="15" />
+                </div>
+
+                <div class="form-group col-sm-2">
+                    <label for="inputZip">千米/秒 (km/s)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="mKilometer_s"
+                        size="15" />
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputState">英里/秒 (mile/s)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="mMile_s" size="15" />
+                </div>
+
+                <div class="form-group col-sm-2">
+                    <label for="inputZip">英尺/秒(ft/s)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="mFoot_s" size="15" />
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputZip">英寸/秒 (in/s)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="mInch_s" size="15" />
+                </div>
+
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-sm-2">
+                    <label for="inputCity">米/时 (m/h)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="mMeter_h" size="15" />
+                </div>
+
+                <div class="form-group col-sm-2">
+                    <label for="inputState">千米/时 (km/h)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="mKilometer_h"
+                        size="15" />
+                </div>
+
+                <div class="form-group col-sm-2">
+                    <label for="inputState">英里/时 (mile/h)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="mMile_h" size="15" />
+                </div>
+                <div class="form-group col-sm-2">
+                        <label for="inputState">英尺/时</label>
+                        <input class="form-control form-control-sm input-text" type="number" name="mFoot_h" size="15" />
+                    </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputZip">英寸/时</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="mInch_h" size="15" />
+                </div>
+                
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-sm-2">
+                    <label for="inputCity">马赫 (mach)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="mMach" size="15" />
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputZip">光速 (c)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="mC" size="15" />
+                </div>
+
+                <div class="form-group col-sm-2">
+                        <label for="inputState">&nbsp;</label>
+                        <button type="button" class="input-button form-control form-control-sm btn btn-primary">
+                            数据重置
+                        </button>
+                    </div>
+            </div>
+
+          
+        </div>
+
+        <div class="alert alert-info" style="margin:15px">
+
+            <div class="tools_jieshao l">
+                <p>本工具可以实现千米/秒(KM/s)，千米/小时(KM/h)，米/秒(M/s)，毫米/秒(MM/s)，微米/秒(μM/s)，英里/秒(MI/s)，英里/小时(MI/h)，英尺/秒(FT/s)，节(Knot)，光速(Speed of light)，音速(Speed of sound)，等各种速度单位间的换算。</p>
+            </div>
+            <div style="margin:10px"></div>
+        </div>
+
+        <div class="panel" style="display: none">
+            <ul>
+                <li>
+                    <p>公里(km)</p>
+                    <p>
+                        <input class="input-text" type="number" name="mKilometer" size="15" />
+                    </p>
+                </li>
+                <li>
+                    <p>米(m)</p>
+                    <p>
+                        <input class="input-text" type="number" name="mMeter" size="15" />
+                    </p>
+                </li>
+                <li>
+                    <p>分米(dm)</p>
+                    <p>
+                        <input class="input-text" type="number" name="mDecimeter" size="15" />
+                    </p>
+                </li>
+                <li>
+                    <p>厘米(cm)</p>
+                    <p>
+                        <input class="input-text" type="number" name="mCentimeter" size="15" />
+                    </p>
+                </li>
+                <li>
+                    <p>毫米(mm)</p>
+                    <p>
+                        <input class="input-text" type="number" name="mMillimeter" size="15" />
+                    </p>
+                </li>
+                <li>
+                    <p>微米(um)</p>
+                    <p>
+                        <input class="input-text" type="number" name="mMicronmeter" size="15" />
+                    </p>
+                </li>
+                <li>
+                    <p>里</p>
+                    <p>
+                        <input class="input-text" type="number" name="mLimeter" size="15" />
+                    </p>
+                </li>
+                <li>
+                    <p>丈</p>
+                    <p>
+                        <input class="input-text" type="number" name="mZhangmeter" size="15" />
+                    </p>
+                </li>
+                <li>
+                    <p>尺</p>
+                    <p>
+                        <input class="input-text" type="number" name="mChimeter" size="15" />
+                    </p>
+                </li>
+                <li>
+                    <p>寸</p>
+                    <p>
+                        <input class="input-text" type="number" name="mCunmeter" size="15" />
+                    </p>
+                </li>
+                <li>
+                    <p>分</p>
+                    <p>
+                        <input class="input-text" type="number" name="mFenmeter" size="15" />
+                    </p>
+                </li>
+                <li>
+                    <p>厘</p>
+                    <p>
+                        <input class="input-text" type="number" name="mmLimeter" size="15" />
+                    </p>
+                </li>
+                <li>
+                    <p>海里(nmi)</p>
+                    <p>
+                        <input class="input-text" type="number" name="nautMile" size="15" />
+                    </p>
+                </li>
+                <li>
+                    <p>英寻</p>
+                    <p>
+                        <input class="input-text" type="number" name="nautFathom" size="15" />
+                    </p>
+                </li>
+                <li>
+                    <p>英里(mi)</p>
+                    <p>
+                        <input class="input-text" type="number" name="engMile" size="15" />
+                    </p>
+                </li>
+                <li>
+                    <p>弗隆(fur)</p>
+                    <p>
+                        <input class="input-text" type="number" name="engFurlong" size="15" />
+                    </p>
+                </li>
+                <li>
+                    <p>码(yd)</p>
+                    <p>
+                        <input class="input-text" type="number" name="engYard" size="15" />
+                    </p>
+                </li>
+                <li>
+                    <p>英尺(ft)</p>
+                    <p>
+                        <input class="input-text" type="number" name="engFoot" size="15" />
+                    </p>
+                </li>
+                <li>
+                    <p>英寸(in)</p>
+                    <p>
+                        <input class="input-text" type="number" name="engInch" size="15" />
+                    </p>
+                </li>
+            </ul>
+            <p><input class="input-button" type="button" value="数据重置" /></p>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"> </script>-->
+
+    <script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+<script src="../../../../common/js/common.js?20190718"></script>
+    <script src="index.js?20190710"></script>
+</body>
+
+</html>

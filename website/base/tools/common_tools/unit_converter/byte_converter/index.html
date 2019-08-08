@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>存储空间换算</title>
+    <meta name="keywords" content="存储空间换算,空间转换,存储容量转换器">
+    <meta name="description" content="数据存储空间换算，千米/秒(KM/s)，千米/小时(KM/h)，米/秒(M/s)">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+        <link rel="stylesheet" href="../../../../common/css/common.css" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <div class="wrapper container-fluid">
+        <div class="shadow-sm p-3 bg-white rounded">
+            <h5>存储空间换算</h5>
+        </div>
+        <div style="margin:15px">
+            <div class="form-row">
+                <div class="form-group col-sm-2">
+                    <label for="inputCity">比特 (bit)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="bit" size="15" />
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputZip">字节(b)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="byte" size="15" />
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputState">千字节(kb) </label>
+                    <input class="form-control form-control-sm input-text" type="number" name="kbyte" size="15" />
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-sm-2">
+                    <label for="inputZip">兆字节(mb)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="mbyte" size="15" />
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputZip">千兆字节(gb)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="gbyte" size="15" />
+                </div>
+
+                <div class="form-group col-sm-2">
+                    <label for="inputZip">拍字节(pb)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="pbyte" size="15" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-sm-2">
+                    <label for="inputZip">太字节(tb)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="tbyte" size="15" />
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputState">&nbsp;</label>
+                    <button type="button" class="input-button form-control form-control-sm btn btn-primary">
+                        数据重置
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert alert-info" style="margin:15px">
+            <h5>存储空间介绍：</h5>
+            <div class="tools_jieshao l">
+                每一千个字节称为1KB，注意，这里的“千”不是我们通常意义上的1000，而是指1024。即：1KB=1024B。但如果不要求严格计算的话，也可以忽略地认为1K就是1000。每1024个KB就是1MB（同样这里的K是指1024），即：1MB=1024KB=1024×1024B=1,048,576B这是准确的计算。　随着存贮信息量的增大，有更大的单位表示存贮容量单位，比吉字节（GB,
+                gigabyte）更高的还有：太字节（TB
+                ，terabyte）、PB(Petabyte)、EB(Exabyte)、ZB(Zettabyte)和YB(yottabyte)等，其中，1PB=1024TB，1EB=1024PB，1ZB=1024EB，1YB=1024ZB。
+            </div>
+            <div style="margin:10px"></div>
+        </div>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"> </script>-->
+
+    <script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+<script src="../../../../common/js/common.js?20190718"></script>
+    <script src="index.js?20190710"></script>
+</body>
+
+</html>

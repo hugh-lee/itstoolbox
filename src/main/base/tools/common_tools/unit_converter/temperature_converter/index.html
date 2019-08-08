@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>温度单位换算_摄氏度/华氏度/开氏度/兰氏度/列氏度换算</title>
+    <meta name="keywords" content="温度换算器,温度转换器,摄氏度/华氏度/开氏度/兰氏度/列氏度温度转换换算">
+    <meta name="description"
+        content="温度转换换算器可实现在线摄氏度(CELSIUS EQUALS)、华氏度(FAHENHEIT EQUALS)、开氏度(KELVIN EQUALS)、兰氏度(RANKINE EQUALS)、列氏度(REAUMUR EQUALS)等各种温度单位间的转换换算。">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="../../../../common/css/common.css" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <div class="wrapper container-fluid">
+        <div class="shadow-sm p-3 bg-white rounded">
+            <h5>温度单位换算</h5>
+        </div>
+        <div style="margin:15px">
+            <div class="form-row">
+                <div class="form-group col-sm-2">
+                    <label for="inputCity">摄氏度(C)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="tempCelsius" size="15" />
+                </div>
+
+                <div class="form-group col-sm-2">
+                    <label for="inputZip">华氏度(F)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="tempFahr" size="15" />
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputState">开氏度(K)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="tempKelvin" size="15" />
+                </div>
+
+
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-sm-2">
+                    <label for="inputZip">兰氏度(Ra)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="tempRankine" size="15" />
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputZip">列氏度(Re)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="tempReaumur" size="15" />
+                </div>
+
+                <div class="form-group col-sm-2">
+                    <label for="inputState">&nbsp;</label>
+                    <button type="button" class="input-button form-control form-control-sm btn btn-primary">
+                        数据重置
+                    </button>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <div class="alert alert-info" style="margin:15px">
+            <h5>温度标度介绍：</h5>
+            <div class="tools_jieshao l">
+
+                温度按标度法不同分为：<br>
+
+                ①华氏温标<br>
+
+                由华伦海特（Fahrenheit
+                1686──1736荷兰）于1714年建立。他最初规定氯化铵与冰的混合物为0°F；人的体温为100°F。后来规定在标准状态下纯水与冰的混合物为32°F；水的沸点为211.9532°F。两个标准点之间均匀划为180等分，每份为1°F。<br>
+
+                ②列氏温标<br>
+
+                由列奥缪尔（Reaumur 1685──1757法国）于1740年建立。他将水的冰点定为0°R；将酒精体积改变千分之一的温度变化为1°R。这样，水的沸点为79.9792°R。<br>
+
+                ③摄氏温标<br>
+
+                由摄尔修斯（Celsius
+                1710──1744瑞典）于1742年建立。最初，他将水的冰点定为0°C；水的沸点定为99.974°C，后来他接受了瑞典科学家林列的建议，把两个温度点的数值对调了过来。1960年国际计量大会对摄氏温标作了新的定义，规定它由热力学温标导出。摄氏温度（符号t）的定义为t/°C=T/K-273.15。<br>
+
+                ④开氏温标<br>
+
+                由开尔文（Lord Kelvin 1824──1907英国）于1848年建立。1954年国际计量大会规定水的三相点的温度为273.16K。这个数值的规定有其历史的原因。<br>
+
+                Ⅰ、为了使开尔文温标每一度的温度间隔与早已建立并广为使用的摄氏标度法每一度的间隔相等<br>；
+
+                Ⅱ、按理想气体温标，通过实验并外推得出理想气体的热膨胀率为1/273.15。由此确定-273.15°C为绝对温度的零度，而冰点的绝对温度为273.15K<br>；
+
+                Ⅲ、将标准温度点由水的冰点改为水的三相点（相差0.01°C）时，按理想气体温标确定的水的三相点的温度就确定为273.16K。
+
+            </div>
+            <div>可实现在线摄氏度(CELSIUS EQUALS)、华氏度(FAHENHEIT EQUALS)、开氏度(KELVIN EQUALS)、兰氏度(RANKINE EQUALS)、列氏度(REAUMUR
+                EQUALS)五种温度计量单位间的互转互换。</div>
+            <div style="margin:10px"></div>
+        </div>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"> </script>-->
+
+    <script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+<script src="../../../../common/js/common.js?20190718"></script>
+    <script src="index.js?20190710"></script>
+</body>
+
+</html>

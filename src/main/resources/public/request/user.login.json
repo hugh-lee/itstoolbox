@@ -1,0 +1,12 @@
+{
+       "header" : {
+              "action" : "user.login",
+              "ip" : "test.ip",
+              "requestId" : "test.request",
+              "requestTime" : 0
+       },
+       "body" : {
+              "userId" : "admin",
+              "password" : "8888888" 
+      }
+}

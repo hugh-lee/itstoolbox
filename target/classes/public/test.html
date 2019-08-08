@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Test Page</title>
+
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<style>
+.textarea {
+	height: 520px;
+}
+</style>
+
+</head>
+<body>
+	<div style="margin: 20px;">
+		<input id="serviceUrl" value="/service"></input>
+		<form method="post" enctype="multipart/form-data" id="fileUploadForm">
+			<table width="800px" border="0" cellpadding="2" cellspacing="0"
+				class="tab">
+				<tr>
+					<td>Request:</td>
+					<td>Response:</td>
+				</tr>
+				<tr>
+					<td><textarea name="request" id="request" type="textarea"
+							style="height: 300px; width: 400px" class='textarea'>{
+              "userId" : "admin",
+              "password" : "888888" 
+      }
+
+</textarea></td>
+					<td><textarea name="response" id="response" type="textarea"
+							style="height: 300px; width: 400px" class='textarea'>
+ 
+</textarea></td>
+				</tr>
+				<tr>
+					<td>Upload File: <input type="file" name="file" id="file"
+						value="myFile" /></td>
+				</tr>
+				<tr>
+					<td><button id="submit">Submit</button></td>
+				</tr>
+
+			</table>
+		</form>
+
+	</div>
+
+	<script type="text/JavaScript">
+		$("#submit").click(function(event) {
+			event.preventDefault();
+
+			// Get form
+			var form = $('#fileUploadForm')[0];
+
+			// Create an FormData object 
+			var formData = new FormData(form);
+
+			/* 			$.post("/service", {
+			 request : $("#request").val()
+			 }, function(data, status) {
+			 $("#response").val(data);
+			 //alert("Data: " + data + "\nStatus: " + status);
+			 }); */
+
+			$.ajax({
+				url : $("#serviceUrl").val(),
+				type : 'POST',
+				cache : false,
+				data : formData,
+				processData : false,
+				contentType : false
+			}).done(function(res) {
+				$("#response").val(res);
+			}).fail(function(res) {
+				$("#response").val(res);
+			});
+		});
+	</script>
+</body>
+</html>

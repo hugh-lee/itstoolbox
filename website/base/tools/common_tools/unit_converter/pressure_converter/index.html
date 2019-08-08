@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>压力单位换算</title>
+    <meta name="keywords" content="压力换算,压力单位换算器,压力换算器,压力转换器">
+    <meta name="description"
+        content="压力转换换算器可实现在线可实现在线巴(bar)、华氏度千帕(kPa)、百帕(hPa)、毫巴(mbar)、帕斯卡、标准大气压(atm)、毫米汞柱(mmHg)、磅力平米英尺英寸、毫米水柱、公斤力平方厘米等各种压力单位间的转换换算。">
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="../../../../common/css/common.css" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <div class="wrapper container-fluid">
+        <div class="shadow-sm p-3 bg-white rounded">
+            <h5>压力单位换算</h5>
+        </div>
+        <div style="margin:15px">
+            <div class="form-row">
+                <div class="form-group col-sm-2">
+                    <label for="inputCity">巴(bar)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="mBar" size="15" />
+                </div>
+                <div class="form-group col-sm-2">
+                        <label for="inputZip">毫巴(mbar)</label>
+                        <input class="form-control form-control-sm input-text" type="number" name="mMillibar" size="15" />
+                    </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputZip">千帕(kPa)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="mKilopascal" size="15" />
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputState">百帕(hPa)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="mHectopascal"
+                        size="15" />
+                </div>
+                <div class="form-group col-sm-2">
+                        <label for="inputCity">帕斯卡(Pa = N/m<sup>2</sup>)</label>
+                        <input class="form-control form-control-sm input-text" type="number" name="mPascal" size="15" />
+                    </div>
+
+            </div>
+
+            <div class="form-row">
+                
+                
+                <div class="form-group col-sm-2">
+                    <label for="inputZip">标准大气压(atm)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="mAtm" size="15" />
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputState">毫米汞柱(托)(mm Hg = Torr)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="mMillimeter_Hg"
+                        size="15" />
+                </div>
+                <div class="form-group col-sm-2">
+                        <label for="inputState">英吋汞柱(in Hg)</label>
+                        <input class="form-control form-control-sm input-text" type="number" name="engInch_Hg" size="15" />
+                    </div>
+                    <div class="form-group col-sm-2">
+                            <label for="inputZip">毫米水柱(mm H<sub>2</sub>O)</label>
+                            <input class="form-control form-control-sm input-text" type="number" name="mmmH2O" size="15" />
+                        </div>
+            </div>
+
+            <div class="form-row">
+
+                    <div class="form-group col-sm-2">
+                            <label for="inputZip">磅力/英尺<sup>2</sup>(lbf/ft<sup>2</sup>)</label>
+                            <input class="form-control form-control-sm input-text" type="number" name="engPound_sq_foot"
+                                size="15" />
+                        </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputZip">磅力/英寸<sup>2</sup>(lbf/in<sup>2</sup> = PSI)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="engPound_sq_inch"
+                        size="15" />
+                </div>
+                
+                <div class="form-group col-sm-2">
+                    <label for="inputZip">公斤力/厘米<sup>2</sup>(kgf/cm<sup>2</sup>)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="xpressKg_sq_cm"
+                        size="15" />
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="inputCity">公斤力/米<sup>2</sup>(kgf/m<sup>2</sup>)</label>
+                    <input class="form-control form-control-sm input-text" type="number" name="xpressKg_sq_m"
+                        size="15" />
+                </div>
+            </div>
+
+            <div class="form-row">
+
+                
+
+                <div class="form-group col-sm-2">
+                    <label for="inputState">&nbsp;</label>
+                    <button type="button" class="input-button form-control form-control-sm btn btn-primary">
+                        数据重置
+                    </button>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <div class="alert alert-info" style="margin:15px">
+            <h5>压力标度介绍：</h5>
+            <div class="tools_jieshao l">
+                <p>物理学上的压力，是指发生在两个物体的接触表面的作用力，或者是气体对于固体和液体表面的垂直作用力，或者是液体对于固体表面的垂直作用力。习惯上，在力学和多数工程学科中，“压力”一词与物理学中的压强同义。
+                </p>
+                <p>
+                    主要单位<br>
+                    A. 压力<br>
+
+                    国际单位：“牛顿”，简称“牛”，符号“N”；<br>
+                    B. 压强<br>
+
+                    国际单位：“帕斯卡”，简称“帕”，符号“Pa ”；<br>
+
+                    换算 　1帕（Pa）=1N/㎡；<br>
+
+                    1兆帕（MPa）=145磅/平方英寸（psi）=10.2千克力/平方厘米（kgf/c㎡）=10巴（bar）=9.8大气压（at m）<br>
+
+                    1磅/英寸2（psi）=0.006895兆帕（MPa）=0.0703千克/平方厘米（kg/c㎡）=0.0689巴（bar）=0.068大气压（atm）；<br>
+
+                    1巴（bar）=0.1兆帕（MPa）=14.503磅/平方英寸（psi）=1.0197千克/平方厘米（kg/c㎡）=0.987大气压（atm）；<br>
+
+                    1大气压（at m）=0.101325兆帕（MPa）=14.696磅/平方英寸（psi）=1.0333千克/平方厘米（kg/c㎡）=1.0133巴（bar）；<br>
+
+                    1毫米汞柱（mmHg）=133.33帕（Pa）；<br>
+
+                    在工程中几种常见压力单位换算关系如下：<br>
+
+                    1MPa=106Pa≈145psi≈10.2kgf/cm²<br>
+
+                    1kgf/cm²=98.067kPa≈98kPa<br>
+
+                    1psi（1bf/in²）=6.8948kPa≈6.9kPa<br>
+
+                    1mmH2O=9.8067Pa≈9.8Pa</p>
+            </div>
+            <div>可实现在线巴(bar)、华氏度千帕(kPa)、百帕(hPa)、毫巴(mbar)、帕斯卡、标准大气压(atm)、毫米汞柱(mmHg)、磅力平米英尺英寸、毫米水柱、公斤力平方厘米等压力计量单位间的互转互换。
+            </div>
+            <div style="margin:10px"></div>
+        </div>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"> </script>-->
+
+    <script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+<script src="../../../../common/js/common.js?20190718"></script>
+    <script src="index.js?20190710"></script>
+</body>
+
+</html>

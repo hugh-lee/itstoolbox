@@ -1,0 +1,183 @@
+{
+    "name" : "tools",
+    "name_cn": "工具列表",
+    "description": "用于日常",
+    "tools": [
+        {
+            "name" : "common_tools",
+            "name_cn": "日常工具",
+            "description": "用于日常",
+            "tools": [
+                {
+                    "name": "unit_converter",
+                    "name_cn": "度量单位换算",
+                    "keywords" : "长度单位换算, 体积单位换算, 容积单位换算, 面积单位换算, 重量单位换算, 速度单位换算, 能量单位换算, 热量单位换算, 温度单位换算, 时间单位换算, 压力单位换算, 存储空间换算, 燃油经济性换算",
+                    "url" : "/tools/common_tools/unit_converter/index.html"
+
+                },
+                {
+                    "name": "currency_converter",
+                    "name_cn": "货币汇率查询",
+                    "url" : "/tools/common_tools/currency_query/index.html"
+                },
+                {
+                    "name": "ip_query",
+                    "name_cn": "IP地址查询",
+                    "url" : "/tools/common_tools/ip_query/index.html"          
+                },
+                {
+                    "name": "chinese_characters",
+                    "name_cn": "汉字转换",
+                    "keywords" : "汉字转换, 简体, 繁体, 火星文, QQ个性繁体, 拼音",
+                    "url" : "/tools/common_tools/chinese_characters/index.html"          
+                },
+                {
+                    "name": "letter_transfer",
+                    "name_cn": "文字转换",
+                    "keywords" : "在线竖文转换工具 古书竖排文字转换器",
+                    "url" : "http://www.aies.cn/shuwen.htm"          
+                },
+                {
+                    "name": "online_translater",
+                    "name_cn": "在线翻译",
+                    "keywords" : "在线翻译, 谷歌翻译,  百度翻译, 有道翻译, 必应翻译",
+                    "url" : "/tools/common_tools/online_translater/index.html"          
+                },
+                {
+                    "name": "express_inquery",
+                    "name_cn": "快递查询",
+                    "keywords" : "宅急送快件, 百世汇通, D速快递, DPEX国际快递(国外), 黑猫宅急便, 冠达快递, 京东快递, 佳宇物流, 民航快递, 全晨快递, 人人快递, 兴马快递,中国邮政,增益速递, 中国邮政国际包裹, 中铁物流集团",
+                    "url" : "/tools/common_tools/express_inquery/index.html"          
+                },
+                {
+                    "name": "phonenumber_query",
+                    "name_cn": "手机号码查询",
+                    "keywords" : "手机号码查询",
+                    "url" : "/tools/common_tools/phonenumber_query/index.html"          
+                }
+            ]
+        },
+        {
+            "name" : "image_processing",
+            "name_cn": "图像处理",
+            "description": "用于日常",
+            "tools": [
+                {
+                    "name": "unit_converter",
+                    "name_cn": "度量单位换算"
+                },
+                {
+                    "name": "currency_converter",
+                    "name_cn": "货币汇率查询",
+                    "tools": [
+                        {
+                            "name": "unit_converter",
+                            "name_cn": "度量单位换算",
+                            "url" : "/common_tools/unit_converter/index.html"
+        
+                        },
+                        {
+                            "name": "currency_converter",
+                            "name_cn": "货币汇率查询",
+                            "url" : "/common_tools/currency_converter/index.html"
+                        },
+                        {
+                            "name": "ip_query",
+                            "name_cn": "IP地址查询",
+                            "url" : "/common_tools/ip_query/index.html",
+                            "tools": [
+                                {
+                                    "name": "unit_converter",
+                                    "name_cn": "度量单位换算",
+                                    "url" : "/common_tools/unit_converter/index.html"
+                
+                                },
+                                {
+                                    "name": "currency_converter",
+                                    "name_cn": "货币汇率查询",
+                                    "url" : "/common_tools/currency_converter/index.html"
+                                },
+                                {
+                                    "name": "ip_query",
+                                    "name_cn": "IP地址查询",
+                                    "url" : "/common_tools/ip_query/index.html"
+                                }
+                            ]
+                        }
+                    ]
+
+                }
+            ]
+        },
+        {
+            "name" : "software_dev",
+            "name_cn": "软件开发",
+            "description": "用于日常",
+            "tools": [
+                {
+                    "name": "code_converter",
+                    "name_cn": "编码转换",                    
+                    "tools" : [{
+                        "name": "binary_converter",
+                        "name_cn": "进制转换",
+                        "url" : "/tools/software_dev/code_converter/binary_converter/index.html"
+                    }]
+
+                },                
+                {
+                    "name": "unit_converter",
+                    "name_cn": "度量单位换算"
+                },
+                {
+                    "name": "currency_converter",
+                    "name_cn": "货币汇率查询"
+                }
+            ]
+        },
+        {
+            "name" : "shopping",
+            "name_cn": "购物",
+            "description": "用于日常",
+            "tools": [
+                {
+                    "name": "unit_converter",
+                    "name_cn": "度量单位换算"
+                },
+                {
+                    "name": "currency_converter",
+                    "name_cn": "货币汇率查询"
+                }
+            ]
+        },
+        {
+            "name" : "america_life",
+            "name_cn": "北美生活",
+            "description": "用于日常",
+            "tools": [
+                {
+                    "name": "commonly_medicine",
+                    "name_cn": "北美常用药品"
+                },
+                {
+                    "name": "currency_converter",
+                    "name_cn": "货币汇率查询"
+                }
+            ]
+        },
+        {
+            "name" : "activies_events",
+            "name_cn": "活动或则事件",
+            "description": "用于日常",
+            "tools": [
+                {
+                    "name": "unit_converter",
+                    "name_cn": "度量单位换算"
+                },
+                {
+                    "name": "currency_converter",
+                    "name_cn": "货币汇率查询"
+                }
+            ]
+        }
+    ]
+}

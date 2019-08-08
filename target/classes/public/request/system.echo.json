@@ -1,0 +1,11 @@
+{
+       "header" : {
+              "action" : "system.echo",
+              "ip" : "test.ip",
+              "requestId" : "test.request",
+              "requestTime" : 0
+       },
+       "body" : {
+              "message" : "it is a echo message"
+       }
+}
