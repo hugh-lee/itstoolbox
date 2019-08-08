@@ -8,10 +8,10 @@ import org.apache.ibatis.jdbc.SQL;
 
 public class SqlProvider {
 
-	public String desc(String table) {		
+	public String desc(String table) {
 		return "desc " + table;
 	}
-	
+
 	public String select(SqlParams params) {
 		String table = params.getTableName();
 		SQL sql = new SQL().SELECT("*").FROM(table);
@@ -22,8 +22,11 @@ public class SqlProvider {
 			Object key = entry.getKey();
 			Object value = entry.getValue();
 			sql.WHERE(key + "=#{" + key + "}");
-
 		}
+		
+		if (params.getSort() != null)
+			sql.ORDER_BY(params.getSort());
+		
 		return sql.toString();
 	}
 

@@ -1,6 +1,7 @@
 package com.toolbox.utils;
 
 import java.io.File;
+import java.io.FileFilter;
 import java.io.IOException;
 import java.util.Collection;
 
@@ -49,6 +50,12 @@ public class FileUtils {
 		return files;
 	}
 
+	public static Collection<File> listFiles(final String directory, final String extension, final boolean recursive) {
+		Collection<File> files = org.apache.commons.io.FileUtils.listFiles(new File(directory),
+				new String[] { extension }, recursive);
+		return files;
+	}
+
 	public static void copyDirectory(String srcDir, String destDir) {
 		try {
 			org.apache.commons.io.FileUtils.copyDirectory(new File(srcDir), new File(destDir));
@@ -56,4 +63,13 @@ public class FileUtils {
 			throw new RuntimeException(e);
 		}
 	}
+
+	public static void copyFileToDirectory(String srcFile, String destDir) {
+		try {
+			org.apache.commons.io.FileUtils.copyFileToDirectory(new File(srcFile), new File(destDir));
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
 }

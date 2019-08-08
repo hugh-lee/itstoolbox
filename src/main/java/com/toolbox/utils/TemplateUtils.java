@@ -20,6 +20,9 @@ public class TemplateUtils {
 	}
 
 	public static String evaluate(String templateString, Map model) {
+		if (model == null)
+			return templateString;
+		
 		try {
 			StringWriter writer = new StringWriter();
 			VelocityContext context = new VelocityContext(model);

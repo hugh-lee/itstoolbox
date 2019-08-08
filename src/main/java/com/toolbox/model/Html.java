@@ -1,7 +1,9 @@
 package com.toolbox.model;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import net.sf.json.JSONObject;
@@ -14,6 +16,9 @@ import net.sf.json.JSONObject;
  */
 public class Html extends HashMap {
 
+	private Html parentHtml;	
+	private List<Html> children = new ArrayList<Html>();
+	
 	private String basePath;
 	private String outputPath;
 
@@ -41,6 +46,8 @@ public class Html extends HashMap {
 	}
 
 	public Html(Map map) {
+		this.putAll(map);
+		
 		this.setId((String) map.get("id"));
 		this.setName((String) map.get("name"));
 		this.setName_cn((String) map.get("name_cn"));
@@ -49,6 +56,7 @@ public class Html extends HashMap {
 		this.setKeywords((String) map.get("keywords"));
 		this.setDescription((String) map.get("description"));
 		this.setTitle((String) map.get("title"));
+		this.setMaker((String) map.get("maker"));
 		this.setData((String) map.get("data"));
 		if (map.get("disabled") != null)
 			this.setDisabled((Boolean) map.get("disabled"));
@@ -129,7 +137,8 @@ public class Html extends HashMap {
 	}
 
 	private void setData(String data) {
-		this.data = JSONObject.fromObject(data);
+		if (data != null)
+			this.data = JSONObject.fromObject(data);
 	}
 
 	public boolean isDisabled() {
@@ -181,6 +190,7 @@ public class Html extends HashMap {
 	public String getImagePath() {
 		return getHtmlFolder() + "/img";
 	}
+
 	public String getOutputFolder() {
 		return new File(this.getOutputHtmlPath()).getParent();
 	}
@@ -209,7 +219,32 @@ public class Html extends HashMap {
 		this.maker = maker;
 	}
 
-	public String toHtml() {
-		return null;
+	
+	public Html getParentHtml() {
+		return parentHtml;
+	}
+
+	public void setParentHtml(Html parentHtml) {
+		this.parentHtml = parentHtml;
+	}
+
+	public List<Html> getChildren() {
+		return children;
+	}
+
+	public void setChildren(List<Html> children) {
+		this.children = children;
+	}
+	
+	public int getLevel() {
+		return this.getId().length() /2;
+	}
+
+	public void setLabel(String value) {
+		this.put("label", value);
+	}
+	
+	public String getLable() {
+		return (String) this.get("label");
 	}
 }

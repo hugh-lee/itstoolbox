@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.toolbox.AppContext;
 import com.toolbox.AppException;
 import com.toolbox.DataObject;
+import com.toolbox.utils.Logger;
 
 import net.sf.json.JSONObject;
 
@@ -20,6 +21,8 @@ public class GlobalExceptionHandler {
 	@ExceptionHandler(value = Exception.class)
 	@ResponseBody
 	public String defaultErrorHandler(HttpServletRequest req, Exception e) throws Exception {
+		Logger.error(e.getMessage(), e);
+		
 		DataObject dobj = AppContext.getDataObject();
 		if (dobj == null)
 			dobj = new DataObject();
@@ -33,7 +36,10 @@ public class GlobalExceptionHandler {
 			dobj.setStatusException(e);
 		}
 
-		return JSONObject.fromObject(dobj).toString();
+		String result = JSONObject.fromObject(dobj).toString();
+		Logger.info("[output]" + result);
+		
+		return result;
 	}
 
 }

@@ -29,6 +29,10 @@ public abstract class BaseService {
 		return baseMapper.selects(createSqlParams(data));
 	}
 
+	public List<Map> getEntitys(Map data, String orderby) {
+		return baseMapper.selects(createSqlParams(data, orderby));
+	}
+
 	public Page<Map> getEntitys(Map data, int pageNumber, int pageSize) {
 		PageHelper.startPage(pageNumber, pageSize);
 		return baseMapper.selectsByPage(createSqlParams(data));
@@ -54,5 +58,11 @@ public abstract class BaseService {
 		params.putAll(data);
 
 		return params;
+	}
+
+	private SqlParams createSqlParams(Map data, String orderby) {
+		SqlParams sqlParams = createSqlParams(data);
+		sqlParams.setSort(orderby);
+		return sqlParams;
 	}
 }

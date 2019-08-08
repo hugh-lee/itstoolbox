@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import com.toolbox.model.Html;
 
 @Component
-public class HomePage extends PageMaker {
+public class HomePageMaker extends PageMaker {
 
 	public static String NAME = "homepage";
 

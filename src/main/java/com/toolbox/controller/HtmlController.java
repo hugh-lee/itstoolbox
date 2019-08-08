@@ -25,18 +25,7 @@ public class HtmlController extends BaseController {
 	@PostMapping("/html.index")
 	public String add(@RequestParam("request") String input) {
 		DataObject dobj = this.getRequestDataObject(input);
-
-		// Date currentDate = new Date();
-		// dobj.put("gmt_created", currentDate);
-		// dobj.put("gmt_modified", currentDate);
-		// dobj.put("group_id", AppContext.getGroupId());
-		//
-		// Map data = riskRuleService.addEntity(dobj.getBody());
-		//
-		// if (data == null) {
-		// dobj.setStatusCode("301");
-		// dobj.setStatusText("添加规则失败。");
-		// }
+		manager.make(dobj.getBody());
 
 		return getOutputString(dobj);
 	}

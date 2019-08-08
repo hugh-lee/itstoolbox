@@ -86,7 +86,7 @@ function showProgress() {
     if ($('#progressWin').length == 0) {
         let errWinHtml = `
           <div id="progressWin" style="display: none; position: fixed;top:45%;left:45%;z-index: 10001;" class="modal-x">
-            <img src="/common/img/busy.gif" width="36px" style="margin-top: 0px; margin-right: 0px;" />
+            <img src="common/img/busy.gif" width="36px" style="margin-top: 0px; margin-right: 0px;" />
             <i class='fa fa-refresh fa-spin'></i>
             <div style="opacity: 0.6;" class="modal-overlay"></div>
           </div>

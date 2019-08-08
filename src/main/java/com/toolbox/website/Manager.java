@@ -1,14 +1,17 @@
 package com.toolbox.website;
 
+import java.io.File;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.toolbox.model.Html;
 import com.toolbox.service.HtmlService;
 import com.toolbox.service.SettingService;
+import com.toolbox.utils.Logger;
 import com.toolbox.website.page.PageMakerFactory;
 
 @Component
@@ -58,8 +61,8 @@ public class Manager {
 	public void make(Map data) {
 		List<Map> htmls = htmlService.getEntitys(data);
 		for (int i = 0, size = htmls.size(); i < size; i++) {
-			Html html = new Html(htmls.get(i));
-			htmlMakerFactory.getHtmlMaker(html.getName()).make(html);
+			Html html = new Html(htmls.get(i));					
+			htmlMakerFactory.getHtmlMaker(html.getMaker()).make(html);
 		}
 	}
 }

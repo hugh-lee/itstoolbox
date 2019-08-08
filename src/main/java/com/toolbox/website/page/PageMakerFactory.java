@@ -7,23 +7,24 @@ import org.springframework.stereotype.Component;
 public class PageMakerFactory {
 
 	@Autowired
-	private PageMaker defaultPage;
+	private DefaultPageMaker defaultPageMaker;
 
 	@Autowired
-	private IndexPage indexPage;
+	private IndexPageMaker indexPageMaker;
 
 	@Autowired
-	private HomePage homePage;
+	private HomePageMaker homePageMaker;
 
+	@SuppressWarnings("static-access")
 	public PageMaker getHtmlMaker(String maker) {
-		if (indexPage.NAME.equals(maker)) {
-			return indexPage;
+		if (indexPageMaker.NAME.equalsIgnoreCase(maker)) {
+			return indexPageMaker;
 		}
 
-		if (homePage.NAME.equals(maker)) {
-			return homePage;
+		if (homePageMaker.NAME.equalsIgnoreCase(maker)) {
+			return homePageMaker;
 		}
 
-		return defaultPage;
+		return defaultPageMaker;
 	}
 }
