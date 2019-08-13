@@ -70,3 +70,18 @@ body {
 }
 
 /**nav tabs*/
+
+
+.wrapper {
+    position: absolute;
+    float: left;
+    height: 100%;
+    left: 0;
+    right: 0;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -o-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+    box-sizing: border-box;
+    overflow-y: auto;
+}

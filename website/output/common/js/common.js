@@ -3,6 +3,7 @@
 // }
 
 
+
 // var _hmt = _hmt || [];
 // (function () {
 //     var hm = document.createElement("script");
@@ -11,45 +12,16 @@
 //     s.parentNode.insertBefore(hm, s);
 // })();
 
-//回到顶部
-(function(){
-	var frameWindow = $('#contentframe').prop('contentWindow');
-	var frameDoc = frameWindow.document;
-    var scroll = function(){
-        //var top = document.documentElement.scrollTop||document.body.scrollTop;
-    	var top = frameDoc.documentElement.scrollTop || frameDoc.body.scrollTop;
-        var display = (top > 420) ? 'block' : 'none';
-        
-        $(".goback").css({"display": display);
-    }  
-    frameWindow.onscroll = scroll;
-    
-    $(".goback").click(function(){
-    		var frameDoc = $('#contentframe').prop('contentWindow').document;
-    		if (frameDoc.documentElement)
-    			frameDoc.documentElement.scrollTop = 0;
-    		if (frameDoc.body)
-    			frameDoc.body.scrollTop = 0;
-    		
-//    		$("body,html").animate({scrollTop:0}, 1000);
-    	});
-    }    
-})();
-	
-
 function enableCrossDomain() {
     $.ajaxPrefilter(function (options) {
         if (options.crossDomain && jQuery.support.cors) {
             var http = (window.location.protocol === 'http:' ? 'http:' : 'https:');
-            // options.url = http + '//cors-anywhere.herokuapp.com/' +
-			// options.url;
-            // options.url = "http://cors.corsproxy.io/url=" + options.url;
+            //options.url = http + '//cors-anywhere.herokuapp.com/' + options.url;
+            //options.url = "http://cors.corsproxy.io/url=" + options.url;
             options.url = http + '//127.0.0.1:8080/' + options.url;
         }
     });
 }
-
-
 
 function request(ops) {
     if (!ops) {
@@ -81,7 +53,7 @@ function request(ops) {
         data: data,
         processData: false,
         contentType: contentType,
-        dataType: datatype, // "xml", "html", "script", "json", "jsonp", "text".
+        dataType: datatype, //"xml", "html", "script", "json", "jsonp", "text".
         beforeSend: function () {
             showProgress();
         },
@@ -114,7 +86,7 @@ function showProgress() {
     if ($('#progressWin').length == 0) {
         let errWinHtml = `
           <div id="progressWin" style="display: none; position: fixed;top:45%;left:45%;z-index: 10001;" class="modal-x">
-            <img src="common/img/busy.gif" width="36px" style="margin-top: 0px; margin-right: 0px;" />
+            <img src="/common/img/busy.gif" width="36px" style="margin-top: 0px; margin-right: 0px;" />
             <i class='fa fa-refresh fa-spin'></i>
             <div style="opacity: 0.6;" class="modal-overlay"></div>
           </div>
@@ -203,18 +175,4 @@ function displayReferences() {
 
 function setIframeContent(iframe, content) {
     iframe.src = "data:text/html;charset=utf-8," + content;
-}
-
-function backToTop() {
-	// 回到顶部
-	(function(){
-	    var $mod_goback = DOMUtil.getElementsByClassName('mod-goback')[0];
-	    if($mod_goback){
-	        var scroll = function(){
-	            var top = document.documentElement.scrollTop||document.body.scrollTop;
-	            $mod_goback.style.display = top>420?'block':'none';
-	        }  
-	        window.onscroll = scroll;
-	    }
-	})();
 }

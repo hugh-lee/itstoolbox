@@ -20,9 +20,6 @@ function initToolMenus(data) {
 
     //click menu item
     $('.tool-menu .menuitem').click(clickMenuItem);
-
-    // init recently menuimte
-    initRecentlyMenu();
 }
 
 function buildToolHtml(tool, first, second, third, forth) {

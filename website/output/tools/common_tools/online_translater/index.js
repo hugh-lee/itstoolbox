@@ -218,3 +218,95 @@ function backToTop() {
 	    }
 	})();
 }
+function enableShare() {
+	window._bd_share_config = {
+		"common" : {
+			"bdSnsKey" : {},
+			"bdText" : "",
+			"bdMini" : "1",
+			"bdMiniList" : [ "mshare", "qzone", "tsina", "fbook", "tqq", "twi",
+					"weixin", "linkedin", "copy", "sqq" ],
+			"bdPic" : "",
+			"bdStyle" : "0",
+			"bdSize" : "16"
+		},
+		"slide" : {
+			"type" : "slide",
+			"bdImg" : "1",
+			"bdPos" : "right",
+			"bdTop" : "87.5"
+		},
+		"image" : {
+			"viewList" : [ "qzone", "tsina", "tqq", "renren", "weixin" ],
+			"viewText" : "分享到：",
+			"viewSize" : "32"
+		},
+		"selectShare" : {
+			"bdContainerClass" : null,
+			"bdSelectMiniList" : [ "qzone", "tsina", "tqq", "renren", "weixin" ]
+		}
+	};
+	with (document)
+		0[(getElementsByTagName('head')[0] || body)
+				.appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='
+				+ ~(-new Date() / 36e5)];
+}
+
+
+function shareWeb() {
+    var $share = document.getElementById('J_share');
+    if ($share) {
+        $share.innerHTML = `<div class="bdsharebuttonbox">
+            <a href="#" class="bds_more" data-cmd="more"></a>
+            <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+            <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+            <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+            <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+        </div>`;
+        window._bd_share_config = {
+            "common": {
+                "bdSnsKey": {},
+                "bdText": "",
+                "bdMini": "2",
+                "bdMiniList": false,
+                "bdPic": "",
+                "bdStyle": "1",
+                "bdSize": "16"
+            },
+            "share": {}
+        };
+        with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+    }
+};
+
+$(document).ready(function () {
+    $('#translateBtn').click(function (e){
+        var name = $('.nav-item a.active').text();
+        var value = $('textarea').val();
+        if (name == "词酷翻译") {
+            window.open('http://ce.linedict.com/dict.html#/cnen/search?query='+ encodeURIComponent(value));
+        }
+        if (name == "金山词霸") {
+            window.open('http://www.iciba.com/'+encodeURIComponent(value)+'/');
+        }
+        if (name == "Google翻译") {
+            window.open('http://translate.google.cn/#en/zh-CN/'+encodeURIComponent(value));
+        }
+        if (name == "有道词典") {
+            window.open('http://dict.youdao.com/search?ue=utf8&q='+encodeURIComponent(value));
+        }
+        if (name == "必应翻译") {
+            window.open('https://cn.bing.com/dict/search?q='+ encodeURIComponent(value));
+        }
+        if (name == "百度词典") {
+            window.open('http://dict.baidu.com/s?wd='+encodeURIComponent(value));
+        }
+        if (name == "cnki翻译助手") {
+            window.open('http://dict.cnki.net/dict_result.aspx?searchword='+encodeURIComponent(value));
+        }
+    });
+});
+
+
+

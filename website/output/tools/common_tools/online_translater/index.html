@@ -16,61 +16,54 @@
     <link rel="stylesheet" href="../../../common/css/common.css" />
     <link rel="stylesheet" href="index.css" />
 
-    <title>快递查询</title>
+    <title>在线翻译</title>
 </head>
 
 <body>
     <div class="wrapper container-fluid">
         <div class="shadow-sm p-3 bg-white rounded">
-            <h5>快递查询</h5>
+            <h5>在线翻译</h5>
         </div>
         <div style="margin:15px">
-            <div class="form-row " style="margin-top: 15px; display: none;">
-                <div class="col-auto">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="">输入订单号</span>
-                        </div>
-                        <input type="text" class="form-control" style="position: static;">
-                        <div class="input-group-append">
-                            <button id="queryBtn" class="btn btn-outline-primary" type="button">查询</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div class="form-row align-items-center">
                 <div class="col-auto">
                     <ul class="nav nav-pills">
                         <li class="nav-item">
-                            <a href="#kuaidi100" class="nav-link active" aria-controls="kuaidi100" role="tab"
-                                data-toggle="tab">快递100</a></li>
+                            <a href="#simplified" class="nav-link active" aria-controls="simplified" role="tab"
+                                data-toggle="tab">词酷翻译</a></li>
                         <li class="nav-item">
-                            <a href="#us17track" class="nav-link" aria-controls="us17track" role="tab"
-                                data-toggle="tab">17track</a></li>
+                            <a href="#traditional" class="nav-link" aria-controls="traditional" role="tab"
+                                data-toggle="tab">金山词霸</a></li>
+                        <li class="nav-item">
+                            <a href="#martian" class="nav-link" aria-controls="martian" role="tab"
+                                data-toggle="tab">Google翻译</a></li>
+                        <li class="nav-item">
+                            <a href="#pinyin" class="nav-link" aria-controls="pinyin" role="tab"
+                                data-toggle="tab">有道词典</a></li>
+                        <li class="nav-item">
+                            <a href="#pinyin" class="nav-link" aria-controls="pinyin" role="tab"
+                                data-toggle="tab">必应翻译</a></li>
+                        <li class="nav-item">
+                            <a href="#pinyin" class="nav-link" aria-controls="pinyin" role="tab"
+                                data-toggle="tab">百度词典</a></li>
+                        <li class="nav-item">
+                            <a href="#pinyin" class="nav-link" aria-controls="pinyin" role="tab"
+                                data-toggle="tab">cnki翻译助手</a></li>
                     </ul>
                 </div>
             </div>
-
-            <div class="tab-content" style="margin-top: 10px">
-                <div role="tabpanel" class="tab-pane active" id="kuaidi100">
-                    <iframe name="kuaidi100" src="https://www.kuaidi100.com/frame/790px.html" width="790" height="765"
-                        marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
-                </div>
-
-                <div role="tabpanel" class="tab-pane " id="us17track">
-                    <iframe src='17track/index.html' name="17track" width="790" height="765" marginwidth="0" marginheight="0" hspace="0"
-                        vspace="0" frameborder="0" scrolling="no">
-                    </iframe>
+            <div class="form-row align-items-center" style="margin-top: 15px;">
+                <div class="col-auto">
+                    <p><textarea rows="15" cols="100" value="" placeholder="在此输入您所要翻译的内容"></textarea></p>
+                    <p><input id='translateBtn' type="button" value="翻译"></p>
                 </div>
 
             </div>
 
-
-            <div class="form-row  align-items-center" style='margin-top:15px;'>
+            <div class="form-row  align-items-center">
                 <div class="col-auto alert alert-info">
                     <div class="input-group mb-3" id='comment'></div>
-                    <div class="input-group mb-3">本站集成了常用快递查询网站，在线可以查询世界范围内的信件和包裹。</div>
+                    <div class="input-group mb-3">本站集成了常用的翻译网站，在线可以进行多语言互译。</div>
                 </div>
             </div>
 

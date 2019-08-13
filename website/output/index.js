@@ -218,3 +218,213 @@ function backToTop() {
 	    }
 	})();
 }
+function enableShare() {
+	window._bd_share_config = {
+		"common" : {
+			"bdSnsKey" : {},
+			"bdText" : "",
+			"bdMini" : "1",
+			"bdMiniList" : [ "mshare", "qzone", "tsina", "fbook", "tqq", "twi",
+					"weixin", "linkedin", "copy", "sqq" ],
+			"bdPic" : "",
+			"bdStyle" : "0",
+			"bdSize" : "16"
+		},
+		"slide" : {
+			"type" : "slide",
+			"bdImg" : "1",
+			"bdPos" : "right",
+			"bdTop" : "87.5"
+		},
+		"image" : {
+			"viewList" : [ "qzone", "tsina", "tqq", "renren", "weixin" ],
+			"viewText" : "分享到：",
+			"viewSize" : "32"
+		},
+		"selectShare" : {
+			"bdContainerClass" : null,
+			"bdSelectMiniList" : [ "qzone", "tsina", "tqq", "renren", "weixin" ]
+		}
+	};
+	with (document)
+		0[(getElementsByTagName('head')[0] || body)
+				.appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='
+				+ ~(-new Date() / 36e5)];
+}
+
+
+function shareWeb() {
+    var $share = document.getElementById('J_share');
+    if ($share) {
+        $share.innerHTML = `<div class="bdsharebuttonbox">
+            <a href="#" class="bds_more" data-cmd="more"></a>
+            <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+            <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+            <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+            <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+        </div>`;
+        window._bd_share_config = {
+            "common": {
+                "bdSnsKey": {},
+                "bdText": "",
+                "bdMini": "2",
+                "bdMiniList": false,
+                "bdPic": "",
+                "bdStyle": "1",
+                "bdSize": "16"
+            },
+            "share": {}
+        };
+        with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+    }
+};
+
+$(document).ready(function () {
+    
+    //init search input
+    $('#searchTxt').keyup(function (e) {
+        filterMenu(e.target.value);
+    });
+
+    //share web
+    shareWeb();
+
+    // show or hide menu
+    initMenuFunction();
+
+    //click menu item
+    $('.tool-menu .menuitem').click(clickMenuItem);
+    
+    // init recently menuitem
+    initRecentlyMenu();
+    
+    $('#feedback').click(function(e) {
+        window.open('http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=RHBxcnd0cnV8BDU1aicrKQ');
+    });
+});
+
+
+/** init recently menu */
+function initRecentlyMenu() {
+    $('.recently-menu').append(localStorage.getItem('recentlyMenuItem1') || "");
+    $('.recently-menu').append(localStorage.getItem('recentlyMenuItem2') || "");
+    $('.recently-menu').append(localStorage.getItem('recentlyMenuItem3') || "");
+
+    $('.recently-menu .menuitem').click(function (i, val) {
+        selectMenuItem(this);
+    });
+}
+
+/** click menu item */
+function clickMenuItem(e) {
+    e.stopPropagation();
+
+    $('.menuitem a i.fa-check').addClass('hide-fa-check');
+    $('.menuitem a i.fa-check').removeClass('fa-check');
+
+    if ($(this).find('ul').length == 0) {
+        // recently menu
+        var newHtml = this.outerHTML;
+        if (newHtml != localStorage.getItem('recentlyMenuItem3') &&
+            newHtml != localStorage.getItem('recentlyMenuItem2') &&
+            newHtml != localStorage.getItem('recentlyMenuItem1')) {
+
+            if (localStorage.getItem('recentlyMenuItem2') != null)
+                localStorage.setItem('recentlyMenuItem3', localStorage.getItem('recentlyMenuItem2'));
+            if (localStorage.getItem('recentlyMenuItem1') != null)
+                localStorage.setItem('recentlyMenuItem2', localStorage.getItem('recentlyMenuItem1'));
+            localStorage.setItem('recentlyMenuItem1', this.outerHTML);
+
+            $('.recently-menu').prepend(this.outerHTML);
+
+            $('.recently-menu .menuitem').each(function (i, val) {
+                if (i > 2) {
+                    $(val).remove();
+                }
+            });
+
+            $('.recently-menu .menuitem').click(function (i, val) {
+                selectMenuItem(this)
+            });
+        }
+
+        selectMenuItem(this);
+    } else {
+        if ($(this).children('a').hasClass("folder-open")) {
+            $(this).children('a').removeClass('folder-open');
+            $(this).children('a').addClass('folder-close');
+
+            $(this).children('ul').css({display:"none"});
+        } else {
+            $(this).children('a').removeClass('folder-close');
+            $(this).children('a').addClass('folder-open');
+            $(this).children('ul').css({display:"block"});
+        }
+    }
+}
+
+function selectMenuItem(menuItem) {
+    $('.menuitem a i.fa-check').addClass('hide-fa-check');
+    $('.menuitem a i.fa-check').removeClass('fa-check');
+
+    $(menuItem).find("a i").addClass('fa-check');
+    $(menuItem).find("a i").removeClass('hide-fa-check');
+}
+
+/**show or hide menu */
+function initMenuFunction() {
+    var toggle = {
+        isOpen: false,
+        open: function () {
+            this.isOpen = true;
+            $("body").addClass('status-show');
+        },
+        close: function () {
+            this.isOpen = false;
+            $("body").removeClass('status-show');
+        }
+    };
+
+    $(".mod-mask").click(function () {
+        toggle.close();
+    });
+
+    $(".menu").click(function () {
+        if (toggle.isOpen) {
+            toggle.close();
+        } else {
+            toggle.open();
+        }
+    });
+
+    $(".side").click(function (e) {
+        if (e.target.tagName == 'INPUT')
+            return;
+
+        if (e.target.tagName == "A") {
+            $(".tool-menu .menuitem .active").removeClass('active');
+            $(e.target).parent().addClass('active');
+        }
+
+        toggle.close();
+    });
+
+    $(".advertise").click(function () {
+        toggle.close();
+    });
+}
+
+/** filter nuenu according to the value of search box */
+function filterMenu(filter) {
+    filter = filter.toUpperCase();
+    $(".tool-menu .menuitem").each(function () {
+        if (!filter || filter.trim() == '') {
+            $(this).removeClass('tool-menu-hide');
+        } else if (this.innerText.indexOf(filter) == -1) {
+            $(this).addClass('tool-menu-hide');
+        } else {
+            $(this).removeClass('tool-menu-hide');
+        }
+    });
+}

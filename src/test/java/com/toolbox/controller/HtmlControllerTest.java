@@ -35,6 +35,13 @@ public class HtmlControllerTest {
 	}
 
 	@Test
+	public void makeAllHtml() throws Exception {
+		String param = "{}";
+		mvc.perform(MockMvcRequestBuilders.get("/html.make").content(param).accept(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
+				.andExpect(content().string(equalTo("Hello World")));
+	}
+
+	@Test
 	public void makeIndexHtml() throws Exception {
 		String param = "{'name':'index'}";
 		mvc.perform(MockMvcRequestBuilders.get("/html.make").content(param).accept(MediaType.APPLICATION_JSON)).andExpect(status().isOk())

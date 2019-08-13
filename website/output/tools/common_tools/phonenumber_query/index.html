@@ -16,55 +16,26 @@
     <link rel="stylesheet" href="../../../common/css/common.css" />
     <link rel="stylesheet" href="index.css" />
 
-    <title>快递查询</title>
+    <title>手机号码查询</title>
 </head>
 
 <body>
     <div class="wrapper container-fluid">
         <div class="shadow-sm p-3 bg-white rounded">
-            <h5>快递查询</h5>
+            <h5>手机号码查询</h5>
         </div>
         <div style="margin:15px">
-            <div class="form-row " style="margin-top: 15px; display: none;">
-                <div class="col-auto">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="">输入订单号</span>
-                        </div>
-                        <input type="text" class="form-control" style="position: static;">
-                        <div class="input-group-append">
-                            <button id="queryBtn" class="btn btn-outline-primary" type="button">查询</button>
-                        </div>
-                    </div>
-                </div>
+            <div class="form-row " style="margin-top: 15px; ">
+                <FORM METHOD=GET ACTION="http://m.ip138.com/mobile.asp" name="mobileform" >
+                    <tr>
+                        <td align="center">手机号码所在地查询：<input type="text" name="mobile" size="16">
+                            <input type="submit" value="查询"><INPUT TYPE="hidden" name="action" value="mobile">
+                        </td>
+                    </tr>
+                </FORM>
             </div>
 
-            <div class="form-row align-items-center">
-                <div class="col-auto">
-                    <ul class="nav nav-pills">
-                        <li class="nav-item">
-                            <a href="#kuaidi100" class="nav-link active" aria-controls="kuaidi100" role="tab"
-                                data-toggle="tab">快递100</a></li>
-                        <li class="nav-item">
-                            <a href="#us17track" class="nav-link" aria-controls="us17track" role="tab"
-                                data-toggle="tab">17track</a></li>
-                    </ul>
-                </div>
-            </div>
 
-            <div class="tab-content" style="margin-top: 10px">
-                <div role="tabpanel" class="tab-pane active" id="kuaidi100">
-                    <iframe name="kuaidi100" src="https://www.kuaidi100.com/frame/790px.html" width="790" height="765"
-                        marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
-                </div>
-
-                <div role="tabpanel" class="tab-pane " id="us17track">
-                    <iframe src='17track/index.html' name="17track" width="790" height="765" marginwidth="0" marginheight="0" hspace="0"
-                        vspace="0" frameborder="0" scrolling="no">
-                    </iframe>
-                </div>
-
-            </div>
 
 
             <div class="form-row  align-items-center" style='margin-top:15px;'>

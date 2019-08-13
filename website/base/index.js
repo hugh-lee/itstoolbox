@@ -5,20 +5,22 @@ $(document).ready(function () {
         filterMenu(e.target.value);
     });
 
-
     //share web
     shareWeb();
 
     // show or hide menu
     initMenuFunction();
 
+    //click menu item
+    $('.tool-menu .menuitem').click(clickMenuItem);
+    
+    // init recently menuitem
+    initRecentlyMenu();
+    
     $('#feedback').click(function(e) {
         window.open('http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=RHBxcnd0cnV8BDU1aicrKQ');
     });
 });
-
-
-
 
 
 /** init recently menu */
